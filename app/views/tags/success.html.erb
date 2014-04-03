@@ -1,0 +1,9 @@
+<% content_for(:title, "Success | Recipes") %>
+
+<h1>Tag saved!</h1>
+
+<p>Your tag was successfully saved.</p>
+
+<p><a href="/recipes/<%= @recipe.id %>/tags">View <%= @tag.name %></a></p>
+
+<p><a href="/recipes">Return to recipe listing</a></p>

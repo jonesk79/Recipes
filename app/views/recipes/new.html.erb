@@ -2,9 +2,9 @@
 
 <h1>New recipe</h1>
 
-<% render('layouts/errors', :object => @recipe) %>
+<%= render('layouts/errors', :object => @recipe) %>
 
 <form action="/recipes" method="post">
-  <% render('form') %>
+  <%= render('form') %>
   <button>Create Recipe</button>
 </form>
