@@ -1,0 +1,12 @@
+<% content_for(:title, "View | Recipes") %>
+
+<h1><%= @recipe.name %></h1>
+
+<p><a href="/recipes">Return to recipe listing</a></p>
+
+<p><a href="/recipes/<%= @recipe.id %>/edit">Edit</a></p>
+<p><a href="/recipes/<%= @recipe.id %>"
+      data-confirm="You sure?"
+      data-method="delete"
+      rel="nofollow">Delete</a></p>
+<p><a href="/recipes">Return to recipe listing</a></p>

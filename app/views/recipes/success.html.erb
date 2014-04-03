@@ -1,0 +1,9 @@
+<% content_for(:title, "Success | Recipes") %>
+
+<h1>Recipe saved!</h1>
+
+<p>Your recipe was successfully saved.</p>
+
+<p><a href="/recipes/<%= @recipe.id %>">View <%= @recipe.name %></a></p>
+
+<p><a href="/recipes">Return to recipe listing</a></p>
