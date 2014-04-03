@@ -4,7 +4,7 @@
 
 <%= render('layouts/errors', :object => @tags) %>
 
-<form action="/recipes/<%= @tag.id %>/tags" method="post">
+<form action="/recipes/<%= @tags.id %>/tags" method="post">
   <%= render('form') %>
   <button>Create Tag</button>
 </form>
