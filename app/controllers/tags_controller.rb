@@ -1,6 +1,6 @@
 class TagsController < ApplicationController
   def new
-    recipe = Recipe.find(param[:recipes_id])
+    recipe = Recipe.find(params[:recipes_id])
     @tags = recipe.tags.new
     render('tags/new.html.erb')
   end
@@ -9,7 +9,8 @@ class TagsController < ApplicationController
     @tag = Tag.new(:name => params[:name],
                    :recipes_id => params[:recipes_id])
     if @tag.save
-      render('tags/success.html.erb')
+      flash[:notice] = "Your tag was successfully added."
+      redirect('/tags/#{tags.id}')
     else
       render('tags/new.html.erb')
     end

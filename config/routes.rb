@@ -8,5 +8,5 @@ Recipes::Application.routes.draw do
   match('/recipes/:id', {:via => [:patch, :put], :to => 'recipes#update'})
   match('/recipes/:id', {:via => :delete, :to => 'recipes#destroy'})
   match('/recipes/:recipes_id/tags/new', {:via => :get, :to => 'tags#new'})
-  match('/recipes/:recipes_id/tags', {:via => :get, :to => 'tags#create'})
+  match('/recipes/:recipes_id/tags', {:via => :post, :to => 'tags#create'})
 end
