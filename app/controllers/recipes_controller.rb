@@ -5,8 +5,7 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.new(:name => params[:name],
-                         :tag_id => params[:tag_id])
+    @recipe = Recipe.new(:name => params[:name])
     if @recipe.save
       flash[:notice] = "Your recipe was successfully added."
       redirect('/recipes/#{recipe.id}')
@@ -32,8 +31,7 @@ class RecipesController < ApplicationController
 
   def update
     @recipe = Recipe.find(params[:id])
-    if @recipe.update(:name => params[:name],
-                      :tag_id => params[:tag_id])
+    if @recipe.update(:name => params[:name])
       render('recipes/success.html.erb')
     else
       render('recipes/edit.html.erb')

@@ -6,8 +6,7 @@ class TagsController < ApplicationController
   end
 
   def create
-    @tag = Tag.new(:name => params[:name],
-                   :recipes_id => params[:recipes_id])
+    @tag = Tag.new(:name => params[:name])
     if @tag.save
       flash[:notice] = "Your tag was successfully added."
       redirect('/tags/#{tags.id}')
